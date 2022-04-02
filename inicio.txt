@@ -1,0 +1,9 @@
+npm i typescript -D
+npx tsc --version
+npx --init
+npx tsc -w
+
+
+# USO DE ts-node
+npm install -D ts-node
+npx ts-node src/demo.ts
