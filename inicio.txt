@@ -7,3 +7,6 @@ npx tsc -w
 # USO DE ts-node
 npm install -D ts-node
 npx ts-node src/demo.ts
+
+
+npm install @faker-js/faker --save-dev
