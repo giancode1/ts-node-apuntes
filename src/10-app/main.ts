@@ -1,5 +1,5 @@
 import faker from '@faker-js/faker';
-import { products, addProduct, updateProduct,  } from './products/product.service';
+import { products, addProduct, updateProduct, findProducts } from './products/product.service';
 
 for (let index = 0; index < 10; index++) {
   addProduct({
@@ -27,11 +27,20 @@ for (let index = 0; index < 10; index++) {
 
 console.log(products);
 
+//Update product
 const product0 = products[0];
-
 const productUpdated = updateProduct(product0.id,{
   title: 'Producto 0',
   stock: 15,
   ///id: '2a',  //ya no me deja cambiar el id, correcto!
   //categoryId: '12'
 })
+console.log('productUpdated:',productUpdated);
+
+//find products
+ findProducts({
+   stock: 10,
+   color: 'red',
+   createdAt: new Date(),
+   isNew: true,
+ })
