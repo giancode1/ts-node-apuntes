@@ -17,6 +17,9 @@ type example2 = Required<Product>;
 
 
 
-export interface FindProductDto extends Readonly<Partial<Product>>{} //Readonly es para que no se pueda modificar el objeto
+// export interface FindProductDto extends Readonly<Partial<Product>>{} //Readonly es para que no se pueda modificar el objeto
+export interface FindProductDto extends Readonly<Partial<Omit<Product, 'tags'>>>{
+  readonly tags: ReadonlyArray<string>; //ahora ya no me deja reasignar ni mutar
+}
 
 type example3 = Readonly<Product>;

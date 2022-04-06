@@ -47,6 +47,6 @@ export const getProduct = (id: Product['id']) => {
 
 export const findProducts = (dto: FindProductDto): Product[] => {
   //dto.color = 'blue' //no me permite modificarlo, correcto!
-
+  //dto.tags?.push('66') //ya no deja con el cambio correcto
   return products;
 }

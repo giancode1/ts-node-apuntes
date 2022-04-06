@@ -43,4 +43,5 @@ console.log('productUpdated:',productUpdated);
    color: 'red',
    createdAt: new Date(),
    isNew: true,
+   tags: ['tag1', 'tag2'],
  })
